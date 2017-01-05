@@ -5,8 +5,8 @@ It uses a Webservice to request weather information about your current location 
 It also provides weather forecasts for the next 6 days.
 
 ### Concepts used:
-* DateFormatter;
-* UITableView;
-* CLLocation+CLLocationManager;
+* DateFormatter
+* UITableView
+* CLLocation+CLLocationManager
 * CocoaPod
-  * Alamofire (Library used to request data from a webservice in a JSON format);
+  * Alamofire (Library used to request data from a webservice in a JSON format)
