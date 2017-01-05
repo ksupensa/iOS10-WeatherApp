@@ -1,0 +1,21 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "f656b565669c789a2d6d84de1debbcf2"
+build_time: [536736311, 97806000]
+inputs:
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/AFError.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Alamofire.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/MultipartFormData.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Notifications.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/ParameterEncoding.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Request.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Response.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/ResponseSerialization.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Result.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/ServerTrustPolicy.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/SessionDelegate.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/SessionManager.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/TaskDelegate.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Timeline.swift": [535855320, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/Pods/Alamofire/Source/Validation.swift": [535855320, 0]

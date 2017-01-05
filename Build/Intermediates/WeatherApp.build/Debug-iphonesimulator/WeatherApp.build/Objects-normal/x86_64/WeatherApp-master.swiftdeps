@@ -1,0 +1,8 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "1920bdce2c1f5fefbc5b62dfb22a6e14"
+build_time: [536762733, 391246000]
+inputs:
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/WeatherApp/WeatherVC.swift": [536735956, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/WeatherApp/AppDelegate.swift": [535724604, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/WeatherApp/CurrentWeather.swift": [536762714, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/6-REST Apps/WeatherApp/WeatherApp/constants.swift": [536734637, 0]
