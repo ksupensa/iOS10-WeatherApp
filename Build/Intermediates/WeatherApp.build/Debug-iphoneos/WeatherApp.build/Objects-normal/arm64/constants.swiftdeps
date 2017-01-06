@@ -14,18 +14,18 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "FORECAST_URL"
-- "LATITUDE"
-- "API_KEY"
-- "APP_ID"
-- "COUNT_FORMAT"
-- "Location"
-- "CURRENT_WEATHER_URL"
-- "BASE_URL"
-- "DownloadComplete"
 - "LONGITUDE"
-- "StringLiteralType"
+- "DownloadComplete"
 - "BASE_FORECAST_URL"
+- "StringLiteralType"
+- "CURRENT_WEATHER_URL"
+- "Location"
+- "FORECAST_URL"
+- "API_KEY"
+- "LATITUDE"
+- "COUNT_FORMAT"
+- "BASE_URL"
+- "APP_ID"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "latitude"]

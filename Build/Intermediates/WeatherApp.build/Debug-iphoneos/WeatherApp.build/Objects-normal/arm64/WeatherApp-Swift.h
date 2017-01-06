@@ -155,10 +155,13 @@ SWIFT_CLASS("_TtC10WeatherApp11WeatherCell")
 @class CLLocationManager;
 @class CLLocation;
 @class UITableView;
+@class UIStackView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC10WeatherApp9WeatherVC")
 @interface WeatherVC : UIViewController <UIScrollViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified mainStackView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified authorizationLbl;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateLbl;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentTempLbl;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified locationLbl;
@@ -170,6 +173,9 @@ SWIFT_CLASS("_TtC10WeatherApp9WeatherVC")
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)locationAuthStatus;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)warningMessage;
+- (void)locationProvided;
 - (void)downloadForecastDataWithCompleted:(void (^ _Nonnull)(void))completed;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;

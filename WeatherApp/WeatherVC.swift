@@ -12,6 +12,9 @@ import Alamofire
 
 class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
+    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var authorizationLbl: UILabel!
+    
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var currentTempLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
@@ -23,7 +26,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
-    var currentWeather: CurrentWeather!
+    var currentWeather = CurrentWeather()
     var forecast: Forecast!
     var forecasts = [Forecast]()
     
@@ -32,35 +35,85 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        currentWeather = CurrentWeather()
+//        currentWeather = CurrentWeather()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        locationAuthStatus()
+        
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways:
+            print("authorizedAlways")
+            break
+        case .authorizedWhenInUse:
+            print("authorizedWhenInUse")
+            break
+        case .denied:
+            print("denied")
+            break
+        case .notDetermined:
+            print("notDetermined")
+            break
+        case .restricted:
+            print("restricted")
+            break
+        }
+        
+        // It will then call locationManager(_:didChangeAuthorization:)
+        // Does nothing if CLLocationManager.authorizationStatus() != .notDetermined
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func locationAuthStatus(){
+        
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             currentLocation = locationManager.location
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
-            print(currentLocation)
+
             currentWeather.downloadWeatherData{
                 self.downloadForecastData{
                     //setup UI to load downloaded data
                     self.updateMainUI()
                 }
             }
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-            locationAuthStatus()
         }
+    }
+    
+    // Should be called only when authorization is changed
+    // Seems to be called each time the app is launched
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        switch status {
+        case .authorizedWhenInUse:
+            print("Authorization Granted")
+            locationProvided()
+            locationAuthStatus()
+            break
+        case .denied:
+            // User denied your app access to Location Services, but can grant access from Settings.app
+            print("Authorization Denied")
+            warningMessage()
+            break
+        default:
+            // Nothing happens
+            break
+        }
+        
+    }
+    
+    func warningMessage(){
+        mainStackView.isHidden = true
+        authorizationLbl.isHidden = false
+    }
+    
+    func locationProvided(){
+        mainStackView.isHidden = false
+        authorizationLbl.isHidden = true
     }
     
     func downloadForecastData(completed: @escaping DownloadComplete){

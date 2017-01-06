@@ -44,20 +44,20 @@ provides-member:
 - ["OO9Alamofire7AFError31ResponseValidationFailureReason", "localizedDescription"]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
+- "Error"
 - "AdaptError"
-- !private "BooleanLiteralType"
-- !private "+"
-- "Bool"
 - !private "UnicodeScalarType"
 - "CastingPrecedence"
-- "Int"
-- "Error"
-- "URLConvertible"
-- !private "StringLiteralType"
-- "AFError"
+- !private "+"
 - "URL"
+- "AFError"
+- "URLConvertible"
+- "Int"
+- !private "BooleanLiteralType"
+- "Bool"
+- !private "StringLiteralType"
 - "LocalizedError"
+- "String"
 depends-member:
 - ["O9Alamofire7AFError", "Bool"]
 - ["O9Alamofire7AFError", "Error"]

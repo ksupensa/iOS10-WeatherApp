@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C10WeatherApp11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidEnterBackground"
-- "applicationWillEnterForeground"
-- "application"
 - "window"
-- "applicationDidBecomeActive"
+- "applicationWillEnterForeground"
+- "applicationDidEnterBackground"
 - "applicationWillResignActive"
 - "applicationWillTerminate"
+- "application"
+- "applicationDidBecomeActive"
 depends-top-level:
-- "AppDelegate"
-- "Bool"
 - !private "BooleanLiteralType"
-- "UIWindow"
 - "UIApplicationDelegate"
-- "UIApplication"
 - "UIResponder"
+- "AppDelegate"
+- "UIApplication"
 - "UIApplicationLaunchOptionsKey"
+- "Bool"
+- "UIWindow"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

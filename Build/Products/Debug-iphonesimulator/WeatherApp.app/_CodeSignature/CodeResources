@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		fp9PGHwjJ41N2Gj1zRB1dkC6i1o=
+		3IAQkg9fvaF29rWmd6vvF2Ybo9w=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		0u/+rbD9JCrxPU7J3SwZvUpJIU4=
+		l3GBxmnFmiH+R6FmwzdvnYqMFRQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		uNIQ8YPz7jAjzBE8OwJHoucpnw4=
+		q48j3MCo5jWiUU0fjjDPwppKQNQ=
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
@@ -55,6 +55,10 @@
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
 		kczkyFkTsCEEfoO5GHHQIgCOuAU=
+		</data>
+		<key>Frameworks/libswiftCoreLocation.dylib</key>
+		<data>
+		Gi6tQUKV0825sFZxc/lQij939dM=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
@@ -86,7 +90,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7UqZERhzgdy2se+IHCdT3EwLuNA=
+		QeaW4ngAbUXfO/F+584xKa0BM1M=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -103,11 +107,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fp9PGHwjJ41N2Gj1zRB1dkC6i1o=
+			3IAQkg9fvaF29rWmd6vvF2Ybo9w=
 			</data>
 			<key>hash2</key>
 			<data>
-			0QSVPk/BZvasZZ26yRWqkuAsnh2kXjd1/lurIvoLjUo=
+			AFCOzlxq42qtdhVXAHF2yrsZ6G9Dod4bLFRQ/s8ASyU=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -147,11 +151,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0u/+rbD9JCrxPU7J3SwZvUpJIU4=
+			l3GBxmnFmiH+R6FmwzdvnYqMFRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			thJFPZ42hEhhYq/FPYg0+JIuGD2gH4MZX0DTXajqiEg=
+			Zx3wk5izpjD7ywUbkZ8g9+2LYdKTc1+/RU81aOEhU6Q=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -169,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uNIQ8YPz7jAjzBE8OwJHoucpnw4=
+			q48j3MCo5jWiUU0fjjDPwppKQNQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			DTh41qLACLlbQjBsRuI6xBFG6M7bcU5mboH82qDmccA=
+			b3fjsMY6GYG3Lak6QEQ/3fVMaKXkcERTNUqrkaJMC0E=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
@@ -240,6 +244,17 @@
 			<key>hash2</key>
 			<data>
 			FnvDmgNFr2JomOicwx+7EKcBGQdHHuJ5gh2aixoStCM=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreLocation.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Gi6tQUKV0825sFZxc/lQij939dM=
+			</data>
+			<key>hash2</key>
+			<data>
+			RrNqMBJSgxXzD93OtINifrsadnebuEanBmcA3nXs7M0=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftDarwin.dylib</key>

@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C10WeatherApp11WeatherCell", ""]
 provides-dynamic-lookup:
-- "weatherIcon"
-- "maxTempLabel"
 - "minTempLabel"
 - "dayLabel"
+- "maxTempLabel"
+- "weatherIcon"
 - "weatherTypeLabel"
 depends-top-level:
+- "UILabel"
+- !private "StringLiteralType"
 - "Forecast"
-- "AssignmentPrecedence"
+- "UIImageView"
 - !private "UIImage"
 - "UITableViewCell"
 - "WeatherCell"
-- "UIImageView"
-- !private "StringLiteralType"
-- "UILabel"
+- "AssignmentPrecedence"
 depends-member:
 - !private ["Ps9AnyObject", "UIImage"]
 - ["Ps9AnyObject", "configureCell"]

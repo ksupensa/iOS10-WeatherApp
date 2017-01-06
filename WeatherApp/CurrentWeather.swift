@@ -51,6 +51,8 @@ class CurrentWeather {
             _currentTemp = 0.0
         }
         
+        _currentTemp = Double(round(10*_currentTemp)/10)
+        
         return "\(_currentTemp!)°C"
     }
     

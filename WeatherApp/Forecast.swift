@@ -33,6 +33,8 @@ class Forecast {
             _highTemp = 0.0
         }
         
+        _highTemp = Double(round(10*_highTemp)/10)
+        
         return _highTemp
     }
     
@@ -40,6 +42,8 @@ class Forecast {
         if _lowTemp == nil {
             _lowTemp = 0.0
         }
+        
+        _lowTemp = Double(round(10*_lowTemp)/10)
         
         return _lowTemp
     }

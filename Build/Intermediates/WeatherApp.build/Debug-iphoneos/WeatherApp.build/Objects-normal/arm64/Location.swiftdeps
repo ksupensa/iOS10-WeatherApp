@@ -7,8 +7,8 @@ provides-member:
 - ["C10WeatherApp8Location", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Location"
 - "Double"
+- "Location"
 depends-member:
 - ["Ps9AnyObject", "Location"]
 - ["Ps9AnyObject", "init"]

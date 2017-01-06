@@ -116,6 +116,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreLocation;
 @import Foundation;
 #endif
 
@@ -136,25 +137,49 @@ SWIFT_CLASS("_TtC10WeatherApp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITableView;
-@class UITableViewCell;
-@class UILabel;
 @class UIImageView;
-@class NSBundle;
+@class UILabel;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC10WeatherApp11WeatherCell")
+@interface WeatherCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified weatherIcon;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dayLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified weatherTypeLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified maxTempLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified minTempLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CLLocationManager;
+@class CLLocation;
+@class UITableView;
+@class UIStackView;
+@class NSBundle;
+
 SWIFT_CLASS("_TtC10WeatherApp9WeatherVC")
-@interface WeatherVC : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface WeatherVC : UIViewController <UIScrollViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified mainStackView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified authorizationLbl;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateLbl;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentTempLbl;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified locationLbl;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified currentWeatherImg;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentWeatherLbl;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified currentWeatherImg;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, readonly, strong) CLLocationManager * _Nonnull locationManager;
+@property (nonatomic, strong) CLLocation * _Null_unspecified currentLocation;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)locationAuthStatus;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)warningMessage;
+- (void)downloadForecastDataWithCompleted:(void (^ _Nonnull)(void))completed;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
+- (void)updateMainUI;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

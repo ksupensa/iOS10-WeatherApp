@@ -7,27 +7,32 @@ provides-member:
 - ["C10WeatherApp14CurrentWeather", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "-"
-- !private "Alamofire"
-- !private "CURRENT_WEATHER_URL"
 - !private "StringLiteralType"
 - !private "DateFormatter"
+- !private "Date"
+- !private "/"
+- "CurrentWeather"
 - !private "AnyObject"
-- !private "=="
-- "AssignmentPrecedence"
-- !private "CastingPrecedence"
-- "String"
-- !private "Dictionary"
+- !private "Alamofire"
+- !private "CURRENT_WEATHER_URL"
+- !private "round"
 - "DownloadComplete"
 - !private "URL"
-- !private "Date"
-- "CurrentWeather"
+- !private "-"
 - "Double"
+- !private "Dictionary"
+- "String"
+- !private "=="
+- !private "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "*"
 depends-member:
+- !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "CURRENT_WEATHER_URL"]
 - !private ["Ps9AnyObject", "Date"]
 - !private ["Ps9AnyObject", "DateFormatter"]
+- !private ["Ps9AnyObject", "Double"]
 - !private ["Ps9AnyObject", "URL"]
 - !private ["Ps9AnyObject", "_cityName"]
 - !private ["Ps9AnyObject", "_currentTemp"]
@@ -37,6 +42,7 @@ depends-member:
 - !private ["Ps9AnyObject", "dateStyle"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "responseJSON"]
+- !private ["Ps9AnyObject", "round"]
 - !private ["Ps9AnyObject", "string"]
 - !private ["Ps9AnyObject", "timeStyle"]
 - ["Ps9AnyObject", ""]
@@ -64,11 +70,13 @@ depends-member:
 - !private ["Vs18BidirectionalSlice", "Iterator"]
 - !private ["Vs18BidirectionalSlice", "SubSequence"]
 - !private ["Vs18BidirectionalSlice", "_Element"]
+- !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Ps17BitwiseOperations", "IntegerLiteralType"]
 - !private ["Ps17BitwiseOperations", "Stride"]
 - !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "Stride"]
@@ -113,6 +121,7 @@ depends-member:
 - ["C10WeatherApp14CurrentWeather", "deinit"]
 - ["C10WeatherApp14CurrentWeather", "downloadWeatherData"]
 - ["C10WeatherApp14CurrentWeather", "init"]
+- !private ["C10WeatherApp14CurrentWeather", "round"]
 - ["C10WeatherApp14CurrentWeather", "weatherType"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
@@ -166,6 +175,7 @@ depends-member:
 - !private ["CSo13DateFormatter", "init"]
 - !private ["CSo13DateFormatter", "string"]
 - !private ["CSo13DateFormatter", "timeStyle"]
+- !private ["VSC7Decimal", "deinit"]
 - !private ["Vs27DefaultBidirectionalIndices", "Index"]
 - !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
 - !private ["Vs27DefaultBidirectionalIndices", "SubSequence"]
@@ -181,6 +191,7 @@ depends-member:
 - !private ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "subscript"]
 - ["Sd", "deinit"]
+- !private ["Sd", "init"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
@@ -201,9 +212,11 @@ depends-member:
 - !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "capitalized"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "capitalized"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "capitalized"]
@@ -211,6 +224,7 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "capitalized"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
+- !private ["Ps13FloatingPoint", "init"]
 - !private ["CSo9Formatter", "dateStyle"]
 - !private ["CSo9Formatter", "init"]
 - !private ["CSo9Formatter", "string"]
@@ -260,6 +274,7 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "capitalized"]
 - !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["V10Foundation11Measurement", "deinit"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
@@ -283,6 +298,7 @@ depends-member:
 - !private ["PSo9NSCopying", "timeStyle"]
 - !private ["PSo16NSMutableCopying", "capitalized"]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "capitalized"]
 - !private ["CSo8NSObject", "dateStyle"]
 - !private ["CSo8NSObject", "init"]
@@ -345,6 +361,7 @@ depends-member:
 - !private ["Ps12SignedNumber", "IntegerLiteralType"]
 - !private ["Ps12SignedNumber", "Stride"]
 - !private ["Ps12SignedNumber", "_DisabledRangeIndex"]
+- !private ["Ps12SignedNumber", "init"]
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "Iterator"]
 - !private ["Vs5Slice", "SubSequence"]
@@ -352,6 +369,7 @@ depends-member:
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
+- !private ["Ps10Strideable", "init"]
 - !private ["SS", "capitalized"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -375,15 +393,19 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "capitalized"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "capitalized"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "capitalized"]
@@ -429,14 +451,18 @@ depends-member:
 - !private ["Ps11_Strideable", "IntegerLiteralType"]
 - !private ["Ps11_Strideable", "Stride"]
 - !private ["Ps11_Strideable", "_DisabledRangeIndex"]
+- !private ["Ps11_Strideable", "init"]
 depends-nominal:
+- !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
 - !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - !private "Vs18BidirectionalSlice"
+- !private "Ps19BinaryFloatingPoint"
 - !private "Ps17BitwiseOperations"
 - "Sb"
+- !private "V12CoreGraphics7CGFloat"
 - !private "Ps7CVarArg"
 - !private "Vs9Character"
 - !private "Ps10Collection"
@@ -450,6 +476,7 @@ depends-nominal:
 - !private "V9Alamofire12DataResponse"
 - "V10Foundation4Date"
 - "CSo13DateFormatter"
+- !private "VSC7Decimal"
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - !private "Vs10Dictionary"
@@ -459,11 +486,13 @@ depends-nominal:
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps30ExpressibleByDictionaryLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
 - !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
+- !private "Ps13FloatingPoint"
 - !private "CSo9Formatter"
 - !private "Ps8Hashable"
 - "SQ"
@@ -479,12 +508,14 @@ depends-nominal:
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
+- !private "V10Foundation11Measurement"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
 - !private "Ps16MutableIndexable"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
 - !private "CSo8NSObject"
 - !private "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
@@ -518,9 +549,12 @@ depends-nominal:
 - !private "P9Alamofire14URLConvertible"
 - !private "Sc"
 - !private "Ps14_ArrayProtocol"
+- !private "Ps15_CVarArgAligned"
+- !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
