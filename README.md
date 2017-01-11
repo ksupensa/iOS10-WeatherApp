@@ -1,7 +1,7 @@
 # iOS10-WeatherApp
 Using a WebService(JSON) and CoreLocation
 
-This RESTful app uses a Webservice to request weather information about your current location (use of CoreLocation).
+It uses a RESTful Webservice to request weather information about your current location (use of CoreLocation).
 It also provides weather forecasts for the next 6 days.
 
 ### Concepts used:
