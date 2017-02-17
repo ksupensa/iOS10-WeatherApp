@@ -10,3 +10,5 @@ It also provides weather forecasts for the next 6 days.
 * CLLocation+CLLocationManager
 * CocoaPod
   * Alamofire (Library used to request data from a webservice in a JSON format)
+
+## All the content(code+resources) are for educational purpose only under 'fair use' and should be use as such.
