@@ -20,6 +20,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var currentWeatherLbl: UILabel!
     @IBOutlet weak var currentWeatherImg: UIImageView!
+    @IBOutlet weak var loadingView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -130,6 +131,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                     }
                     self.forecasts.remove(at: 0)
                     self.tableView.reloadData()
+                    
+                    if !self.loadingView.isHidden {
+                        self.loadingView.isHidden = true
+                    }
                 }
             }
             completed()

@@ -17,7 +17,6 @@ let API_KEY = "e8d0a1bf158d1495ece678b4b5c6b7eb"
 
 let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)\(Location.sharedInstance.latitude!)\(LONGITUDE)\(Location.sharedInstance.longitude!)\(APP_ID)\(API_KEY)"
 
-
 let BASE_FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?"
 let COUNT_FORMAT = "&cnt=7&mode=json"
 

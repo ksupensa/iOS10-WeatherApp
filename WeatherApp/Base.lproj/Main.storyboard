@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,22 +46,22 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="heO-Ws-ucs">
-                                                <rect key="frame" x="16" y="8" width="119" height="224"/>
+                                                <rect key="frame" x="16" y="8" width="130" height="224"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, July 26, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coM-gg-U2w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="52.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, 3 january, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coM-gg-U2w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="52.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,5°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4A-x6-9LK">
-                                                        <rect key="frame" x="0.0" y="52.5" width="119" height="119"/>
+                                                        <rect key="frame" x="0.0" y="52.5" width="130" height="119"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portland, Oregon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-Gm-1gu">
-                                                        <rect key="frame" x="0.0" y="171.5" width="119" height="52.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-Gm-1gu">
+                                                        <rect key="frame" x="0.0" y="171.5" width="130" height="52.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DjH-Og-5BS">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherVC" rowHeight="80" id="Sqf-9S-zTB" customClass="WeatherCell" customModule="WeatherApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
@@ -185,14 +185,34 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5PC-Dk-lQ1" userLabel="Loading">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSm-92-WWR">
+                                        <rect key="frame" x="93.5" y="222" width="134.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lSm-92-WWR" firstAttribute="centerY" secondItem="5PC-Dk-lQ1" secondAttribute="centerY" id="6aq-U1-6Fp"/>
+                                    <constraint firstItem="lSm-92-WWR" firstAttribute="centerX" secondItem="5PC-Dk-lQ1" secondAttribute="centerX" id="866-Yl-CBx"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UyB-nA-QaE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="4Vb-Qg-tQb"/>
                             <constraint firstItem="9rX-uR-M8s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ADH-bF-Coq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UyB-nA-QaE" secondAttribute="bottom" id="HQZ-0y-kpX"/>
+                            <constraint firstItem="5PC-Dk-lQ1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="X0E-ah-XnE"/>
                             <constraint firstAttribute="trailing" secondItem="UyB-nA-QaE" secondAttribute="trailing" id="ZgD-mx-XUW"/>
+                            <constraint firstItem="5PC-Dk-lQ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eff-9S-DVj"/>
                             <constraint firstItem="UyB-nA-QaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gEY-iU-uRR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5PC-Dk-lQ1" secondAttribute="bottom" id="hfp-l1-K7c"/>
+                            <constraint firstAttribute="trailing" secondItem="5PC-Dk-lQ1" secondAttribute="trailing" id="mdg-eG-aAS"/>
                             <constraint firstItem="9rX-uR-M8s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nVt-UW-ghq"/>
                             <constraint firstItem="9rX-uR-M8s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oMJ-n6-Lm5"/>
                         </constraints>
@@ -203,6 +223,7 @@
                         <outlet property="currentWeatherImg" destination="tzK-td-F37" id="a8N-wh-8CN"/>
                         <outlet property="currentWeatherLbl" destination="oKw-O6-5mu" id="yqt-bv-dRW"/>
                         <outlet property="dateLbl" destination="coM-gg-U2w" id="G3o-uA-IvX"/>
+                        <outlet property="loadingView" destination="5PC-Dk-lQ1" id="Mfg-lv-s74"/>
                         <outlet property="locationLbl" destination="xRS-Gm-1gu" id="zKL-Yi-akW"/>
                         <outlet property="mainStackView" destination="UyB-nA-QaE" id="Vgx-YW-2Pb"/>
                         <outlet property="tableView" destination="DjH-Og-5BS" id="eYI-ez-Aw1"/>
